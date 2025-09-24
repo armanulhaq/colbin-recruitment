@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 const Register = () => {
     const IMAGE_URL =
-        "https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg";
+        "https://images.pexels.com/photos/1251862/pexels-photo-1251862.jpeg";
 
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data) => {
@@ -26,17 +26,17 @@ const Register = () => {
         }
     };
     return (
-        <div className="flex items-center justify-center min-h-screen px-6 md:px-0">
-            <div className="flex flex-col md:flex-row w-full max-h-screen rounded-xl border border-gray-200 ">
+        <div className="flex items-center justify-center min-h-screen  px-5 xl:px-0 ">
+            <div className="flex flex-col md:flex-row w-full max-h-screen rounded-xl border border-gray-200">
                 <div className="w-full md:w-1/2">
                     <img
-                        className="w-full h-64 md:h-full rounded-t-xl md:rounded-t-none object-cover"
+                        className="w-full h-64 md:h-full object-cover rounded-t-xl xl:rounded-t-none"
                         src={IMAGE_URL}
                         alt="Login"
                     />
                 </div>
 
-                <div className="w-full bg-[#fbfaff] md:w-1/2 flex flex-col items-center  justify-center p-8 md:p-12">
+                <div className="w-full bg-[#fbfaff] md:w-1/2 flex flex-col items-center justify-center p-8 md:p-12">
                     <div className="w-full max-w-sm">
                         <h1 className="text-3xl font-bold text-center mb-2">
                             Welcome to Colbin 👋
@@ -69,14 +69,17 @@ const Register = () => {
                             />
                             <button
                                 type="submit"
-                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-md font-medium transition-colors duration-200 cursor-pointer"
+                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
                             >
                                 Get Started
                             </button>
                         </form>
                         <p className="text-center text-sm">
                             Already have an account?{" "}
-                            <Link to="/login" className="text-[#532b88]">
+                            <Link
+                                to="/login"
+                                className="text-[#532b88] font-bold"
+                            >
                                 Sign In
                             </Link>
                         </p>

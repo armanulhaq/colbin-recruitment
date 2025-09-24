@@ -9,11 +9,11 @@ const Login = () => {
     const onSubmit = (data) => console.log(data);
 
     return (
-        <div className="flex items-center justify-center min-h-screen px-6 md:px-0">
-            <div className="flex flex-col md:flex-row w-full max-h-screen rounded-xl border border-gray-200 ">
+        <div className="flex items-center justify-center min-h-screen  px-5 xl:px-0 ">
+            <div className="flex flex-col md:flex-row w-full max-h-screen rounded-xl border border-gray-200">
                 <div className="w-full md:w-1/2">
                     <img
-                        className="w-full h-64 md:h-full rounded-t-xl md:rounded-t-none object-cover"
+                        className="w-full h-64 md:h-full object-cover rounded-t-xl xl:rounded-t-none"
                         src={IMAGE_URL}
                         alt="Login"
                     />
@@ -37,25 +37,28 @@ const Login = () => {
                                 {...register("email")}
                                 type="email"
                                 placeholder="Email"
-                                className="w-full border border-gray-300 rounded-md px-4 py-3 "
+                                className="w-full border border-gray-300 rounded-xl px-4 py-3 "
                             />
                             <input
                                 {...register("password")}
                                 type="password"
                                 placeholder="Password"
-                                className="w-full border border-gray-300 rounded-md px-4 py-3 "
+                                className="w-full border border-gray-300 rounded-xl px-4 py-3 "
                             />
                             <button
                                 type="submit"
-                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-md font-medium transition-colors duration-200 cursor-pointer"
+                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
                             >
-                                Login
+                                Login to Dashboard
                             </button>
                         </form>
                         <p className="text-center text-sm">
                             Don't have an account?{" "}
-                            <Link to="/register" className="text-[#532b88]">
-                                Sign Up
+                            <Link
+                                to="/register"
+                                className="text-[#532b88] font-bold"
+                            >
+                                Get Started
                             </Link>
                         </p>
                     </div>
