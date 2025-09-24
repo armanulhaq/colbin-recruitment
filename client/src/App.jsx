@@ -1,10 +1,18 @@
 import "./App.css";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+//import Dashboard from "./pages/Dashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <>
-            <div className="flex flex-col min-h-screen bg-fuchsia-50"></div>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+            </Routes>
+        </BrowserRouter>
     );
 }
 
