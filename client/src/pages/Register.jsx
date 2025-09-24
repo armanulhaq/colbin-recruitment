@@ -36,14 +36,14 @@ const Register = () => {
                     />
                 </div>
 
-                <div className="w-full md:w-1/2 flex flex-col items-center  justify-center p-8 md:p-12">
+                <div className="w-full bg-[#fbfaff] md:w-1/2 flex flex-col items-center  justify-center p-8 md:p-12">
                     <div className="w-full max-w-sm">
                         <h1 className="text-3xl font-bold text-center mb-2">
-                            Sign Up
+                            Welcome to Colbin 👋
                         </h1>
-                        <h3 className="text-gray-500 text-center mb-8">
-                            Sign up to your account
-                        </h3>
+                        <p className="text-gray-500 text-center mb-6">
+                            Join thousands of job seekers and recruiters.
+                        </p>
 
                         <form
                             className="space-y-4"
@@ -53,25 +53,25 @@ const Register = () => {
                                 {...register("name")}
                                 type="text"
                                 placeholder="Name"
-                                className="w-full border border-gray-300 rounded-md px-4 py-3 "
+                                className="w-full border border-gray-300 rounded-xl px-4 py-3 "
                             />
                             <input
                                 {...register("email")}
                                 type="email"
                                 placeholder="Email"
-                                className="w-full border border-gray-300 rounded-md px-4 py-3 "
+                                className="w-full border border-gray-300 rounded-xl px-4 py-3 "
                             />
                             <input
                                 {...register("password")}
                                 type="password"
                                 placeholder="Password"
-                                className="w-full border border-gray-300 rounded-md px-4 py-3 "
+                                className="w-full border border-gray-300 rounded-xl px-4 py-3 "
                             />
                             <button
                                 type="submit"
                                 className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-md font-medium transition-colors duration-200 cursor-pointer"
                             >
-                                Register
+                                Get Started
                             </button>
                         </form>
                         <p className="text-center text-sm">

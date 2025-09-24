@@ -19,13 +19,14 @@ const Login = () => {
                     />
                 </div>
 
-                <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-8 md:p-12">
+                <div className="w-full md:w-1/2 bg-[#fbfaff] flex flex-col items-center justify-center p-8 md:p-12">
                     <div className="w-full max-w-sm">
                         <h1 className="text-3xl font-bold text-center mb-2">
-                            Sign In
+                            Welcome Back 👋
                         </h1>
                         <h3 className="text-gray-500 text-center mb-8">
-                            Sign in to your account
+                            Log in to access your profile and discover new
+                            opportunities.
                         </h3>
 
                         <form
