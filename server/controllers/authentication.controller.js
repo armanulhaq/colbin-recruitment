@@ -112,8 +112,8 @@ const loginController = async (req, res) => {
         const token = generateToken(user);
         res.cookie("token", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            secure: process.env.NODE_ENV === "production", //when true (production), cookie is sent only over HTTPS.
+            sameSite: "none", //allows cookies to be sent in cross-site requests.
             maxAge: 60 * 60 * 1000,
         });
 
