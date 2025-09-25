@@ -109,7 +109,6 @@ const loginController = async (req, res) => {
                 .status(401)
                 .json({ message: "Invalid email or password" });
         }
-
         const token = generateToken(user);
         res.cookie("token", token, {
             httpOnly: true,
@@ -139,7 +138,11 @@ const authenticateMe = async (req, res) => {
         return res.status(401).json({ message: "Unauthorized" });
     }
     try {
-        const user = verifyToken(token);
+        const { id } = verifyToken(token);
+        if (!id) {
+            return res.status(401).json({ message: "Unauthorized" });
+        }
+        const user = await User.findById(id).select("name email");
         if (!user) {
             return res.status(401).json({ message: "Unauthorized" });
         }
