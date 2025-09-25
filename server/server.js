@@ -17,9 +17,11 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.get("/", (req, res) => {
     res.send("Colbin Recruitment Platform server is functioning perfectly!");
 });
+
 app.use("/api/auth", authenticationRoute);
 
 const start = async () => {
