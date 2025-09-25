@@ -6,7 +6,6 @@ import connectDB from "./utils/database.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
-connectDB();
 
 const app = express();
 app.use(
@@ -20,7 +19,17 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authenticationRoute);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+const start = async () => {
+    const PORT = process.env.PORT || 3000;
+    try {
+        await connectDB();
+        app.listen(PORT, () => {
+            console.log(`Server running on port ${PORT}`);
+        });
+    } catch (err) {
+        console.error("Failed to start server due to DB connection error.");
+        process.exit(1);
+    }
+};
+
+start();
