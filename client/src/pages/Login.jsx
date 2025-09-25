@@ -25,6 +25,7 @@ const Login = () => {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify(data),
+                    credentials: "include",
                 }
             );
             if (!res.ok) {
@@ -122,7 +123,7 @@ const Login = () => {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
+                                className="w-full bg-[#532b88] hover:bg-[#3c096c] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
                             >
                                 {isLoading
                                     ? "Logging in..."

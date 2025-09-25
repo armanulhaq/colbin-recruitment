@@ -138,7 +138,7 @@ const Register = () => {
                                                 "Password must be less than 20 characters",
                                         },
                                         pattern: {
-                                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/,
+                                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/,
                                             message:
                                                 "Password must have uppercase, lowercase, number & special character",
                                         },
@@ -156,7 +156,7 @@ const Register = () => {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full bg-[#532b88] hover:bg-[#2f184b] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
+                                className="w-full bg-[#532b88] hover:bg-[#3c096c] text-white py-3 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
                             >
                                 {isLoading ? "Registering..." : "Get Started"}
                             </button>
